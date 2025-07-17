@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+
+void cadastrar_cartas(){
     //  Definição das variaveis da primeira carta
     char estado_carta1;
     char codigo_carta1[3];
@@ -9,6 +10,8 @@ int main() {
     float area_carta1;
     float pib_carta1;
     int numero_pontos_turisticos_carta1;
+    float densidade_populacional_carta1;
+    float pib_per_capita_carta1;
     
     //  Definição das variaveis da segunda carta
     char estado_carta2;
@@ -18,6 +21,8 @@ int main() {
     float area_carta2;
     float pib_carta2;
     int numero_pontos_turisticos_carta2;
+    float densidade_populacional_carta2;
+    float pib_per_capita_carta2;
 
      // Introdução (já fornecida antes)
     printf("===========================================\n");
@@ -87,6 +92,17 @@ int main() {
 
     printf("-----------------------------\n\n");
 
+
+    densidade_populacional_carta1 = (float) populacao_carta1 / area_carta1;
+    pib_per_capita_carta1 =  (float) pib_carta1  * 1000000000.0 /  populacao_carta1;
+    
+    
+    densidade_populacional_carta2 = (float) populacao_carta2 / area_carta2;
+    pib_per_capita_carta2 = (float) pib_carta2 * 1000000000.0 / populacao_carta2;
+    
+    
+    
+    
     printf("Cadastro concluído com sucesso! ✅\n\n");
     printf("A seguir, serão exibidas as informações das cartas cadastradas:\n\n");
 
@@ -96,8 +112,11 @@ int main() {
     printf("    Nome da Cidade: %s \n", cidade_carta1);
     printf("    População: %d \n", populacao_carta1);
     printf("    Área: %d km² \n", area_carta1);
-    printf("    PIB: %d bilhões de reais \n", pib_carta1);
+    printf("    PIB: %.2f bilhões de reais \n", pib_carta1);
     printf("    Número de Pontos Turísticos: %d \n", numero_pontos_turisticos_carta1);
+    printf("    Densidade Populacional: %.2f \n", densidade_populacional_carta1);
+    printf("    PIB per Capita: %.2f \n", pib_per_capita_carta1);
+    
     
     printf("Carta 2: \n");
     printf("    Estado: %d \n", estado_carta2);
@@ -107,8 +126,13 @@ int main() {
     printf("    Área: %d km² \n", area_carta2);
     printf("    PIB: %d bilhões de reais \n", pib_carta2);
     printf("    Número de Pontos Turísticos: %d \n", numero_pontos_turisticos_carta2);
-    
+    printf("    Densidade Populacional: %.2f \n", densidade_populacional_carta2);
+    printf("    PIB per Capita: %.2f \n", pib_per_capita_carta2);
 
+}
+
+int main() {
+    cadastrar_cartas();
 
     return 0;
 }
