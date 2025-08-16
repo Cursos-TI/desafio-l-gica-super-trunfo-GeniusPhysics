@@ -127,9 +127,23 @@ void cadastrar_cartas(){
     printf("PIB, se 0 carta 2 vence, se 1 carta 1 vence: %d\n", pib_carta1 > pib_carta2);
     printf("Pontos Turísticos, se 0 carta 2 vence, se 1 carta 1 vence: %d\n", numero_pontos_turisticos_carta1 > numero_pontos_turisticos_carta2);
     printf("Densidade Populacional, se 0 carta 2 vence, se 1 carta 1 vence: %d\n", densidade_populacional_carta1 < densidade_populacional_carta2);
-    printf("PIB per Capita, se 0 carta 2 vence, se 1 carta 1 vence: %d\n", pib_per_capita_carta1 > pib_per_capita_carta2);
+    
+    // if (pi)
+    // printf("PIB per Capita, se 0 carta 2 vence, se 1 carta 1 vence: %d\n", pib_per_capita_carta1 > pib_per_capita_carta2);
+    
+    
     printf("Super Poder, se 0 carta 2 vence, se 1 carta 1 vence: %d\n", super_poder_carta1 > super_poder_carta2);
     
+
+    printf("Comparação de cartas (Atributo: Pib per Capita):\n");
+    printf("Carta 1 - %s (%c): %.2f \n", cidade_carta1, estado_carta1, pib_per_capita_carta1);
+    printf("Carta 2 - %s (%c): %.2f \n", cidade_carta2, estado_carta2, pib_per_capita_carta2);
+    
+    if (pib_per_capita_carta1 > pib_per_capita_carta2) {
+        printf("Resultado: Carta 1 (%s) vence\n", cidade_carta1);
+    } else {
+        printf("Resultado: Carta 2 (%s) vence\n", cidade_carta2);
+    }
 
     
 
