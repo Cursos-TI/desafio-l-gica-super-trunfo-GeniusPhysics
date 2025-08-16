@@ -3,29 +3,17 @@
 
 void cadastrar_cartas(){
     //  Definição das variaveis da primeira carta
-    char estado_carta1;
-    char codigo_carta1[4];
-    char cidade_carta1[30];
-    unsigned long int populacao_carta1;
-    float area_carta1;
-    float pib_carta1;
-    int numero_pontos_turisticos_carta1;
-    float densidade_populacional_carta1;
-    float pib_per_capita_carta1;
-    float super_poder_carta1;
-
-
-    //  Definição das variaveis da segunda carta
-    char estado_carta2;
-    char codigo_carta2[4];
-    char cidade_carta2[30];
-    unsigned long int populacao_carta2;
-    float area_carta2;
-    float pib_carta2;
-    int numero_pontos_turisticos_carta2;
-    float densidade_populacional_carta2;
-    float pib_per_capita_carta2;
-    float super_poder_carta2;
+    char estado_carta1, estado_carta2;
+    char codigo_carta1[4], codigo_carta2[4];
+    char cidade_carta1[30], cidade_carta2[30];
+    unsigned long int populacao_carta1, populacao_carta2;
+    float area_carta1, area_carta2;
+    float pib_carta1, pib_carta2;
+    int numero_pontos_turisticos_carta1, numero_pontos_turisticos_carta2;
+    float densidade_populacional_carta1, densidade_populacional_carta2;
+    float pib_per_capita_carta1, pib_per_capita_carta2;
+    float super_poder_carta1, super_poder_carta2;
+    
 
      // Introdução (já fornecida antes)
     printf("===========================================\n");
