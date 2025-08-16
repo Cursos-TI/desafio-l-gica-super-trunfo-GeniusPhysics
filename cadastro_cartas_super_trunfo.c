@@ -33,12 +33,11 @@ void cadastrar_cartas(){
     scanf("%c", &estado_carta1);
 
     printf("Digite o código da carta. A letra do estado seguida de um número de 01 a 04 (ex: A01, B03): ");
-    scanf("%3s", &codigo_carta1);
+    scanf("%3s", &codigo_carta1); // sem & porque já é array
 
-    // limpa o caracter \n do input anterior. Se não utilizado gera um problema de pular etapas das perguntas
-    getchar();
+    
     printf("Digite o nome da cidade: ");
-    fgets(cidade_carta1, 30, stdin);
+    scanf(" %29[^\n]", &cidade_carta1);
     
     printf("Informe a população da cidade: ");
     scanf("%d", &populacao_carta1);
@@ -50,7 +49,7 @@ void cadastrar_cartas(){
     scanf("%f", &pib_carta1);
     
     printf("Informe o número de pontos turísticos: ");
-    scanf("%d", &numero_pontos_turisticos_carta1);
+    scanf(" %d", &numero_pontos_turisticos_carta1);
     printf("-----------------------------\n\n");
 
 
@@ -58,16 +57,14 @@ void cadastrar_cartas(){
     printf("Agora, vamos cadastrar a segunda carta.\n");
     printf("---------- CARTA 2 ----------\n");
 
-    getchar();
     printf("Informe a letra do Estado (de 'A' a 'H'):");
-    scanf("%c", &estado_carta2);
+    scanf(" %c", &estado_carta2);
     
     printf("Digite o código da carta. A letra do estado seguida de um número de 01 a 04 (ex: A01, B03): ");
     scanf("%3s", &codigo_carta2);
 
-    getchar();
     printf("Digite o nome da cidade: ");
-    fgets(cidade_carta2, 30, stdin);
+    scanf(" %29[^\n]", &cidade_carta2);
 
     printf("Informe a população da cidade: ");
     scanf("%d", &populacao_carta2);
@@ -102,7 +99,7 @@ void cadastrar_cartas(){
     printf("Carta 1: \n");
     printf("    Estado: %c \n", estado_carta1);
     printf("    Código: %s \n", codigo_carta1);
-    printf("    Nome da Cidade: %s ", cidade_carta1);
+    printf("    Nome da Cidade: %s \n", cidade_carta1);
     printf("    População: %d \n", populacao_carta1);
     printf("    Área: %.2f km² \n", area_carta1);
     printf("    PIB: %.2f bilhões de reais \n", pib_carta1);
@@ -114,7 +111,7 @@ void cadastrar_cartas(){
     printf("Carta 2: \n");
     printf("    Estado: %c \n", estado_carta2);
     printf("    Código: %s \n", codigo_carta2);
-    printf("    Nome da Cidade: %s ", cidade_carta2);
+    printf("    Nome da Cidade: %s \n", cidade_carta2);
     printf("    População: %d \n", populacao_carta2);
     printf("    Área: %.2f km² \n", area_carta2);
     printf("    PIB: %.2f bilhões de reais \n", pib_carta2);
