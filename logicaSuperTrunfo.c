@@ -49,7 +49,7 @@ int main() {
     scanf("%3s", &codigo_carta1); 
     
     printf("Digite o nome da cidade: ");
-    scanf(" %29[^\n]", &cidade_carta1);
+    scanf(" %29[^\n]", &cidade_carta1); // utilizar dessa forma permite limpar o buffer e aceitar nomes com espacos
     
     printf("Informe a população da cidade: ");
     scanf("%d", &populacao_carta1);
@@ -61,9 +61,11 @@ int main() {
     scanf("%f", &pib_carta1);
     
     printf("Informe o número de pontos turísticos: ");
-    scanf(" %d", &numero_pontos_turisticos_carta1);
+    scanf(" %d", &numero_pontos_turisticos_carta1); // espaço no inicio para limpar o buffer
 
+    // conversão das variáveis para float para evitar problemas de arredondamento
     densidade_populacional_carta1 = (float) populacao_carta1 / area_carta1;
+    // pib é coletado em bilhoes, entao precisa ser convertido para milhoes
     pib_per_capita_carta1 =  (float) pib_carta1  * 1000000000.0 /  populacao_carta1;
     super_poder_carta1 = (float) populacao_carta1 + area_carta1 + (float) pib_carta1 + numero_pontos_turisticos_carta1 + pib_per_capita_carta1 + 1 / densidade_populacional_carta1;
 
@@ -74,13 +76,13 @@ int main() {
     printf("---------- CARTA 2 ----------\n");
 
     printf("Informe a letra do Estado (de 'A' a 'H'):");
-    scanf(" %c", &estado_carta2);
+    scanf(" %c", &estado_carta2); // espaço no inicio para limpar o buffer
     
     printf("Digite o código da carta. A letra do estado seguida de um número de 01 a 04 (ex: A01, B03): ");
     scanf("%3s", &codigo_carta2);
 
     printf("Digite o nome da cidade: ");
-    scanf(" %29[^\n]", &cidade_carta2);
+    scanf(" %29[^\n]", &cidade_carta2); 
 
     printf("Informe a população da cidade: ");
     scanf("%d", &populacao_carta2);
